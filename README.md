@@ -18,7 +18,7 @@ b-t-s(bucket-translate-service) 버킷은 index.html(번역 서비스)과 histor
 
 ### 4. Lambda, API Gateway – 번역 기능
    <img width="220" alt="image" src="https://github.com/user-attachments/assets/8c767f5e-91ca-4fa8-8d23-15dd5abb2a63" /><img width="200" alt="image" src="https://github.com/user-attachments/assets/4f860014-24dc-4ac0-9f4c-48f1a243bc6a" /><br>
-Lambda_for_translate_service<br>
+[Lambda_for_translate_service]<br>
 - translate을 호출하여 번역하는Lambda함수<br>
 - translate을 사용하기 위해translate의 모든권한과s3에 접근하여 객체를생성하는권한을연결함<br>
 1. 입력된텍스트를submit하면 활성화된다.<br>
@@ -38,7 +38,7 @@ Lambda_for_translate_service<br>
 ### 5. DynamoDB
 <img width="262" alt="image" src="https://github.com/user-attachments/assets/f292bad9-484d-43b2-aaf1-cc29ffe3bede" />
 <img width="299" alt="image" src="https://github.com/user-attachments/assets/ebaa11cf-7599-4b62-9956-1ac81fc8b566" /><br>
-[Dynamodb_translate]<br>
+Dynamodb_translate<br>
 - Id, 입력된텍스트, 번역된텍스트를저장하는 NoSQL 기반의데이터베이스<br>
 1. 번역결과와원본텍스트가 DynamoDB의 dynamodb_translate 테이블에저장된다.<br>
 2. 사용자가history.html에서 번역기록조회버튼을클릭하면, 클릭이벤트가 API Gateway를 통해<br>
