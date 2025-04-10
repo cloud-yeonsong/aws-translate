@@ -1,14 +1,14 @@
 # 클라우드 네이티브 토이 프로젝트
 ## 실습 해설
-1. index.html : 언어감지를 통한 번역기능 구현
-   <img width="476" alt="image" src="https://github.com/user-attachments/assets/9c4baa42-20f4-4235-9530-0a2e9ff01d5f" />
-수업 시간에 실습한 번역 프로그램은 영어에서 한국어로만 번역이 가능해서 아쉬움이 있었으며,
-이를 보완하기 위해 언어 감지 기능을 구현하여 영어는 한국어로, 한국어는 영어로 번역할 수 있도록 개선했다. 
-또한, 입력된 텍스트와 번역 결과는 DynamoDB에 저장된다.
+### 1. index.html : 언어감지를 통한 번역기능 구현
+   <img width="476" alt="image" src="https://github.com/user-attachments/assets/9c4baa42-20f4-4235-9530-0a2e9ff01d5f" /><br>
+수업 시간에 실습한 번역 프로그램은 영어에서 한국어로만 번역이 가능해서 아쉬움이 있었으며,<br>
+이를 보완하기 위해 언어 감지 기능을 구현하여 영어는 한국어로, 한국어는 영어로 번역할 수 있도록 개선했다. <br>
+또한, 입력된 텍스트와 번역 결과는 DynamoDB에 저장된다.<br>
 
-2. history.html : 번역 기록 조회 기능 구현
-<img width="469" alt="image" src="https://github.com/user-attachments/assets/c73ff346-f28a-4b7e-a8da-3ec59b63625b" />
-번역 기록 조회 버튼을 클릭하면, DynamoDB에 저장된 입력된 텍스트(원본 텍스트)와 번역된 텍스트를 조회 할 수 있다.
+### 2. history.html : 번역 기록 조회 기능 구현
+<img width="469" alt="image" src="https://github.com/user-attachments/assets/c73ff346-f28a-4b7e-a8da-3ec59b63625b" /><br>
+번역 기록 조회 버튼을 클릭하면, DynamoDB에 저장된 입력된 텍스트(원본 텍스트)와 번역된 텍스트를 조회 할 수 있다.<br>
 
 3. Amazon S3
    <img width="469" alt="image" src="https://github.com/user-attachments/assets/fee4053c-7508-40bf-ad7e-61b71bb67d38" />
