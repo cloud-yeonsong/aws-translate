@@ -10,22 +10,22 @@
 <img width="469" alt="image" src="https://github.com/user-attachments/assets/c73ff346-f28a-4b7e-a8da-3ec59b63625b" /><br>
 번역 기록 조회 버튼을 클릭하면, DynamoDB에 저장된 입력된 텍스트(원본 텍스트)와 번역된 텍스트를 조회 할 수 있다.<br>
 
-3. Amazon S3
-   <img width="469" alt="image" src="https://github.com/user-attachments/assets/fee4053c-7508-40bf-ad7e-61b71bb67d38" />
-b-t-s(bucket-translate-service) 버킷은 index.html(번역 서비스)과 history.html(기록 조회) 객체가 있다.
-이 버킷은 S3를 통해 정적 웹페이지를 호스팅하기 위해 생성되었으며, 객체 소유권 설정에서 ACL을 활성화했다.
-또한, 버킷의 퍼블릭 설정을 해제 했으며, index.html과 history.html은 ACL에 퍼블릭 읽기 액세스 권한을 부여하였다.
+### 3. Amazon S3
+   <img width="469" alt="image" src="https://github.com/user-attachments/assets/fee4053c-7508-40bf-ad7e-61b71bb67d38" /><br>
+b-t-s(bucket-translate-service) 버킷은 index.html(번역 서비스)과 history.html(기록 조회) 객체가 있다.<br>
+이 버킷은 S3를 통해 정적 웹페이지를 호스팅하기 위해 생성되었으며, 객체 소유권 설정에서 ACL을 활성화했다.<br>
+또한, 버킷의 퍼블릭 설정을 해제 했으며, index.html과 history.html은 ACL에 퍼블릭 읽기 액세스 권한을 부여하였다.<br>
 
-4. Lambda, API Gateway – 번역 기능
+### 4. Lambda, API Gateway – 번역 기능
    <img width="220" alt="image" src="https://github.com/user-attachments/assets/8c767f5e-91ca-4fa8-8d23-15dd5abb2a63" /><img width="200" alt="image" src="https://github.com/user-attachments/assets/4f860014-24dc-4ac0-9f4c-48f1a243bc6a" />
-Lambda_for_translate_service
-- translate을 호출하여 번역하는Lambda함수
-- translate을 사용하기 위해translate의 모든권한과s3에 접근하여 객체를생성하는권한을연결함
-1. 입력된텍스트를submit하면 활성화된다.
-2. Gateway API로부터값을받아번역한다.
-3. 번역한텍스트를DynamoDB의 dynamodb_translate에 저장한후번역한값을반환한다.
-4. 반환된데이터는API Gateway를 통해브라우저로전달된다.
-5. 결과는index.html에 출력되어사용자가번역결과를 확인할수있다.
+Lambda_for_translate_service<br>
+- translate을 호출하여 번역하는Lambda함수<br>
+- translate을 사용하기 위해translate의 모든권한과s3에 접근하여 객체를생성하는권한을연결함<br>
+1. 입력된텍스트를submit하면 활성화된다.<br>
+2. Gateway API로부터값을받아번역한다.<br>
+3. 번역한텍스트를DynamoDB의 dynamodb_translate에 저장한후번역한값을반환한다.<br>
+4. 반환된데이터는API Gateway를 통해브라우저로전달된다.<br>
+5. 결과는index.html에 출력되어사용자가번역결과를 확인할수있다.<br>
 
 <img width="243" alt="image" src="https://github.com/user-attachments/assets/edd23a5c-e2a9-4275-bfa6-b195216d647c" /><img width="194" alt="image" src="https://github.com/user-attachments/assets/76f33ab4-70d4-429b-baa1-f87f1d6bf77f" />
 Dynamodb_data
@@ -35,7 +35,7 @@ Dynamodb_data
 3. 반환된데이터는API Gateway를 통해브라우저로전달된다.
 4. 결과는history.html에 출력되어 사용자가번역기록을확인할 수있다.
 
-6. DynamoDB
+### 5. DynamoDB
 <img width="262" alt="image" src="https://github.com/user-attachments/assets/f292bad9-484d-43b2-aaf1-cc29ffe3bede" />
 <img width="299" alt="image" src="https://github.com/user-attachments/assets/ebaa11cf-7599-4b62-9956-1ac81fc8b566" />
 Dynamodb_translate
