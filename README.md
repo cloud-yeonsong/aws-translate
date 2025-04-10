@@ -28,27 +28,31 @@ Lambda_for_translate_service<br>
 5. 결과는index.html에 출력되어사용자가번역결과를 확인할수있다.<br>
 
 <img width="243" alt="image" src="https://github.com/user-attachments/assets/edd23a5c-e2a9-4275-bfa6-b195216d647c" /><img width="194" alt="image" src="https://github.com/user-attachments/assets/76f33ab4-70d4-429b-baa1-f87f1d6bf77f" />
-Dynamodb_data
-- DynamoDB에서 데이터읽어오는 Lambda함수
-1. 번역기록조회버튼을클릭하면 활성화된다.
-2. Gateway API로부터요청을받아DynamoDB의 dynamodb_translate 테이블에 저장된데이터를조회하고, 결과로id, 입력된 텍스트(원본), 번역된텍스트를반환한다.
-3. 반환된데이터는API Gateway를 통해브라우저로전달된다.
-4. 결과는history.html에 출력되어 사용자가번역기록을확인할 수있다.
+[Dynamodb_data]<br>
+- DynamoDB에서 데이터읽어오는 Lambda함수<br>
+1. 번역기록조회버튼을클릭하면 활성화된다.<br>
+2. Gateway API로부터요청을받아DynamoDB의 dynamodb_translate 테이블에 저장된데이터를조회하고, 결과로id, 입력된 텍스트(원본), 번역된텍스트를반환한다.<br>
+3. 반환된데이터는API Gateway를 통해브라우저로전달된다.<br>
+4. 결과는history.html에 출력되어 사용자가번역기록을확인할 수있다.<br>
 
 ### 5. DynamoDB
 <img width="262" alt="image" src="https://github.com/user-attachments/assets/f292bad9-484d-43b2-aaf1-cc29ffe3bede" />
 <img width="299" alt="image" src="https://github.com/user-attachments/assets/ebaa11cf-7599-4b62-9956-1ac81fc8b566" />
-Dynamodb_translate
-- Id, 입력된텍스트, 번역된텍스트를저장하는 NoSQL 기반의데이터베이스
-1. 번역결과와원본텍스트가 DynamoDB의 dynamodb_translate 테이블에저장된다.
-2. 사용자가history.html에서 번역기록조회버튼을클릭하면, 클릭이벤트가 API Gateway를 통해
-Dynamodb_data Lambda함수로 요청을전달하고, 람다함수가DynamoDB의 dynamo_translate 테이블에서
-모든데이터를조회한다.
-3. 조회된데이터가API Gateway를 통해브라우저로전달되고, history.html에 출력한다.
+[Dynamodb_translate]<br>
+- Id, 입력된텍스트, 번역된텍스트를저장하는 NoSQL 기반의데이터베이스<br>
+1. 번역결과와원본텍스트가 DynamoDB의 dynamodb_translate 테이블에저장된다.<br>
+2. 사용자가history.html에서 번역기록조회버튼을클릭하면, 클릭이벤트가 API Gateway를 통해<br>
+Dynamodb_data Lambda함수로 요청을전달하고, 람다함수가DynamoDB의 dynamo_translate 테이블에서<br>
+모든데이터를조회한다.<br>
+3. 조회된데이터가API Gateway를 통해브라우저로전달되고, history.html에 출력한다.<br>
 
 
 ## 아키텍처
 ![image](https://github.com/user-attachments/assets/58e6d9e8-99a1-40df-acc9-83eedb028c92)
 
 ## 느낀점
-1, 2학년 때 AWS를 처음 접했을 때는 어렵고 비용이 많이 드는 무서운 기술로 느껴졌다. 또한, 작년에 다른 프로젝트를 할 때, AWS를 활용한 팀을 보며 흥미를 느꼈지만, 여전히 막연한 두려움이 있었다. 그래서 이번 클라우드 수업을 듣는 것도 망설였는데, 그래도 졸업하기 전에 AWS에 대한 막연한 두려움을 극복하고자 이번 수업을 듣게 되었다. 막상 수업을 들으니, AWS는 생각보다 간단하고 흥미로운 기술이며, 클라우드서비스는 저장공간만이 아니라 다양한 기능을 제공한다는 점도 알게 되었다. 수업 때 진행한 실습도 정말 재미있고 흥미를 느끼게 했으며, 기말과제를 하기 전에는 약간의 두려움이 있었지만 천천히 실습하다 보니 더 다양한 기능을 구현해 보고 싶었고, 여러 가지 AWS의 기술에 관해 관심이 생겼다. 이번 수업은 클라우드 기술에 대한 두려움을 극복하고 흥미를 키울 수 있는 너무 좋은 계기였으며, 앞으로 AI나 블록체인 기술을 클라우드와 결합해 더 복잡한 프로젝트를 구현해 보고 싶다.
+1, 2학년 때 AWS를 처음 접했을 때는 어렵고 비용이 많이 드는 무서운 기술로 느껴졌다. 또한, 작년에 다른 프로젝트를 할 때, AWS를 활용한 팀을 보며 흥미를 느꼈지만, 여전히 막연한 두려움이 있었다.<br>
+그래서 이번 클라우드 수업을 듣는 것도 망설였는데, 그래도 졸업하기 전에 AWS에 대한 막연한 두려움을 극복하고자 이번 수업을 듣게 되었다.<br>
+막상 수업을 들으니, AWS는 생각보다 간단하고 흥미로운 기술이며, 클라우드서비스는 저장공간만이 아니라 다양한 기능을 제공한다는 점도 알게 되었다.<br>
+수업 때 진행한 실습도 정말 재미있고 흥미를 느끼게 했으며, 기말과제를 하기 전에는 약간의 두려움이 있었지만 천천히 실습하다 보니 더 다양한 기능을 구현해 보고 싶었고, 여러 가지 AWS의 기술에 관해 관심이 생겼다.<br>
+이번 수업은 클라우드 기술에 대한 두려움을 극복하고 흥미를 키울 수 있는 너무 좋은 계기였으며, 앞으로 AI나 블록체인 기술을 클라우드와 결합해 더 복잡한 프로젝트를 구현해 보고 싶다.<br>
