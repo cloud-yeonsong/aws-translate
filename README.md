@@ -91,18 +91,12 @@
 - 서버를 직접 구성하지 않아도 Lambda와 API Gateway로 **완전한 기능 구현이 가능**하다는 점이 인상 깊었습니다.
 - 이제는 AWS를 활용한 프로젝트에 **도전하고 싶은 욕심**이 생겼고, 앞으로는 AI, 블록체인 같은 기술도 클라우드와 함께 접목시켜보고 싶습니다.
 
+---
+
 ## 시연 동영상
+https://github.com/user-attachments/assets/375f0fc1-9b1a-48e7-afae-874e83cf8ecb
 
-
-https://github.com/user-attachments/assets/e046d172-2b2c-4065-b004-23b1266cb33e
-
-
-
-https://github.com/user-attachments/assets/29699032-348c-4260-b82e-9a4ab1304273
-
-
-https://github.com/user-attachments/assets/edaeacbd-6a1a-4b2c-a001-23648c86b4a6
-
+---
 
 ## End-Point
 http://b-t-s.s3-website.ap-northeast-2.amazonaws.com
